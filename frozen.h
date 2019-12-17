@@ -27,6 +27,17 @@ extern "C" {
 #include <stddef.h>
 #include <stdio.h>
 
+typedef void *(*Alloc)(size_t);
+typedef void (*Free)(void*);
+typedef void *(*Realloc)(void*, size_t);
+
+typedef struct {
+    Alloc alloc;
+    Free free;
+} Allocator;
+
+extern Allocator allocator;
+
 #if defined(_WIN32) && _MSC_VER < 1700
 typedef int bool;
 enum { false = 0, true = 1 };
