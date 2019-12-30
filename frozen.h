@@ -253,6 +253,8 @@ int json_unescape(const char *src, int slen, char *dst, int dlen);
  */
 int json_escape(struct json_out *out, const char *str, size_t str_len);
 
+int json_get_utf8_char_len(unsigned char ch);
+
 /*
  * Read the whole file in memory.
  * Return malloc-ed file content, or NULL on error. The caller must free().

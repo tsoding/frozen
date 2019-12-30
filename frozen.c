@@ -224,7 +224,7 @@ static int json_parse_identifier(struct frozen *f) {
   return 0;
 }
 
-static int json_get_utf8_char_len(unsigned char ch) {
+int json_get_utf8_char_len(unsigned char ch) {
   if ((ch & 0x80) == 0) return 1;
   switch (ch & 0xf0) {
     case 0xf0:
