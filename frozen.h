@@ -29,7 +29,6 @@ extern "C" {
 
 typedef void *(*Alloc)(size_t);
 typedef void (*Free)(void*);
-typedef void *(*Realloc)(void*, size_t);
 
 typedef struct {
     Alloc alloc;
