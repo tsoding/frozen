@@ -66,6 +66,11 @@ void *epic_alloc(size_t size)
 
 static void epic_free(void *ptr) {}
 
+Allocator allocator = {
+    .alloc = epic_alloc,
+    .free = epic_free
+};
+
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 #define RUN_TEST(test)        \
   do {                        \

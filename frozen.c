@@ -73,11 +73,6 @@ typedef unsigned _int64 uint64_t;
 #define JSON_ENABLE_ARRAY 1
 #endif
 
-Allocator allocator = {
-    .alloc = malloc,
-    .free = free
-};
-
 struct frozen {
   const char *end;
   const char *cur;
